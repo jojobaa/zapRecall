@@ -13,7 +13,6 @@ export default function Nav() {
 const NavRecall = styled.div`
 display: flex;
 align-items: center;
-margin: 0px 0 20px 0;
 img{
     width: 52px;
 }

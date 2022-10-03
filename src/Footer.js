@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export default function Footer() {
+    
     return (
         <FooterContain>
             <FooterRecall>
@@ -8,12 +9,14 @@ export default function Footer() {
                 <ButtonYellow><p>Quase não lembrei!</p></ButtonYellow>
                 <ButtonGreen><p>Zap!</p></ButtonGreen>
             </FooterRecall>
-            <h1>0/4 CONCLUÍDOS</h1>
+            <h1 data-identifier="flashcard-counter">0/4 CONCLUÍDOS</h1>
         </FooterContain>
     )
 }
 
 const FooterContain = styled.div`
+width:100%;
+aligh-itens:center;
 background-color: #FFFFFF;
 h1{
     font-family: 'Recursive';
@@ -24,7 +27,9 @@ h1{
 }
 `
 const FooterRecall = styled.div`
+aligh-itens:center;
 display : flex;
+justify-content: center;
     p{
         font-family: 'Recursive';
         font-style: normal;

@@ -15,10 +15,10 @@ export default function Card({ numberQ, question, answer }) {
     }
 
     return (
-        <CardRecall openCard={openCard}>
-            <p>{!openCard ? `Pergunta ${numberQ}` : rotate ? answer : question}</p>
-            {!openCard && (<Button onClick={questionDisplay}><img src={setaplay} alt='' /></Button>)}
-            {openCard && (<Button onClick={answerDisplay} margintop = '100px'><img src={setavirar} alt=''/></Button>)}
+        <CardRecall data-identifier="flashcard-question" openCard={openCard}>
+            <p data-identifier="flashcard-answer">{!openCard ? `Pergunta ${numberQ}` : rotate ? answer : question}</p>
+            {!openCard && (<Button data-identifier="flashcard-show-btn" onClick={questionDisplay}><img src={setaplay} alt='' /></Button>)}
+            {openCard && (<Button data-identifier="flashcard-turn-btn" onClick={answerDisplay} margintop = '100px'><img src={setavirar} alt=''/></Button>)}
         </CardRecall>
     )
 }
